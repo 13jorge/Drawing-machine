@@ -38,7 +38,25 @@ function keyTyped() {
     //save this image
     saveCanvas('fileName', 'png');
   } else if (key === 'c') {
-    clear();
+    // clear();
+    numCells = 10;
+    let startColor = color(20, 200, 160);
+    let endColor = color(200, 200, 0);
+    let fillColor;
+    noStroke();
+    strokeWeight(0);
+    for (let i = 0; i <= width; i += width / numCells) {
+      for (let j = 0; j <= height; j += height / numCells) {
+        fillColor = lerpColor(startColor, endColor, j / height);
+        fill(fillColor);
+            rect(i, j, width / numCells, height / numCells);
+      }
+
+
+    }
+
+  strokeWeight(5)
+
     //display image
     //     background(255);
     // beginShape();
