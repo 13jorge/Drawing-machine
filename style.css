@@ -16,5 +16,5 @@ canvas {
   z-index: -1; */
   margin: 0 auto 0 auto;
   display: block;
-  border: 5px solid black;
+  border: 5px solid red;
 }
